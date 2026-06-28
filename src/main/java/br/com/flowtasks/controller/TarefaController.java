@@ -53,5 +53,11 @@ public class TarefaController {
 		TarefaResponseDto tarefaBuscada = tarefaService.listarTarefaPorId(id);
 		return  tarefaBuscada;
 	}
+
+	@PatchMapping(value = "/{id}/concluir")
+	public ResponseEntity<Void> marcarTarefaComoConcluida(@PathVariable Long id) {
+		tarefaService.marcarTarefaComoConcluida(id);
+		return ResponseEntity.ok().build();
+	}
 }
 

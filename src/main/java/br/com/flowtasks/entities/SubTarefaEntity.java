@@ -3,7 +3,10 @@ package br.com.flowtasks.entities;
 import br.com.flowtasks.enums.Prioridade;
 import br.com.flowtasks.enums.Status;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -16,7 +19,8 @@ public class SubTarefaEntity {
     @Column(nullable = false)
     private String nome;
     private String descricao;
-    private Timestamp dataCriacao;
+    @CreationTimestamp
+    private LocalDate dataCriacao;
     private Date dataConclusao;
     @Enumerated(EnumType.ORDINAL)
     private Status statusTarefa;
@@ -29,7 +33,7 @@ public class SubTarefaEntity {
 
     public SubTarefaEntity() {}
 
-    public SubTarefaEntity(Long id, String nome, String descricao, Timestamp dataCriacao, Date dataConclusao, Status statusTarefa, Prioridade prioridadeTarefa, TarefaEntity tarefaPai) {
+    public SubTarefaEntity(Long id, String nome, String descricao, LocalDate dataCriacao, Date dataConclusao, Status statusTarefa, Prioridade prioridadeTarefa, TarefaEntity tarefaPai) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -64,11 +68,11 @@ public class SubTarefaEntity {
         this.descricao = descricao;
     }
 
-    public Timestamp getDataCriacao() {
+    public LocalDate getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(Timestamp dataCriacao) {
+    public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 

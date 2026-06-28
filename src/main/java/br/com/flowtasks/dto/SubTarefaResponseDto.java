@@ -5,7 +5,7 @@ import br.com.flowtasks.enums.Status;
 import java.util.Date;
 
 public class SubTarefaResponseDto {
-
+    private Long id;
     private String nome;
     private String descricao;
     private Date dataConclusao;
@@ -14,6 +14,7 @@ public class SubTarefaResponseDto {
     public SubTarefaResponseDto() {}
 
     public SubTarefaResponseDto(SubTarefaEntity subTarefa) {
+        this.id = subTarefa.getId();
         this.nome = subTarefa.getNome();
         this.descricao = subTarefa.getDescricao();
         this.dataConclusao = subTarefa.getDataConclusao();
@@ -50,5 +51,13 @@ public class SubTarefaResponseDto {
 
     public void setStatusTarefa(Status statusTarefa) {
         this.statusTarefa = statusTarefa;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
