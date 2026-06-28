@@ -29,7 +29,7 @@ public class TarefaEntity {
 	private Status statusTarefa;
 	@Enumerated(EnumType.ORDINAL)
 	private Prioridade prioridadeTarefa;
-	@OneToMany(mappedBy = "tarefaPai")
+	@OneToMany(mappedBy = "tarefaPai", cascade = CascadeType.REMOVE)
 	private List<SubTarefaEntity> subTarefas = new ArrayList<>();
 
 
