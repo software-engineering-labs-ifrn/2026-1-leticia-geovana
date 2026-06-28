@@ -1,10 +1,10 @@
-package com.employee.crudEmployee;
+package br.com.flowtasks;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudEmployeeApplicationTests {
+class FlowTasksApplicationTests {
 
 	@Test
 	void contextLoads() {

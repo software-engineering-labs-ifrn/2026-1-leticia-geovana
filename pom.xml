@@ -8,11 +8,11 @@
 		<version>3.5.11</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.employee</groupId>
-	<artifactId>crudEmployee</artifactId>
+	<groupId>com.flowtasks</groupId>
+	<artifactId>flowtasks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>crudEmployee</name>
-	<description>Projeto para estudar operações CRUD no spring boot </description>
+	<name>flowtasks</name>
+	<description>API para gereciamento e organização de tarefas</description>
 	<url/>
 	<licenses>
 		<license/>
