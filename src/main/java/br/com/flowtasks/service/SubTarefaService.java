@@ -54,7 +54,7 @@ public class SubTarefaService {
 
 	}
 	
-	public SubTarefaResponseDto listarTarefaPorId(Long id) {
+	public SubTarefaResponseDto listarSubTarefaPorId(Long id) {
 		SubTarefaEntity tarefaBuscada = subTarefaRepository.findById(id).orElseThrow(() -> new RuntimeException("Tarefa não encontrada"));
 		SubTarefaResponseDto subTarefa = new SubTarefaResponseDto(tarefaBuscada);
 
