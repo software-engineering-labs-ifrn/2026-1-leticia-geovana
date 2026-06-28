@@ -22,9 +22,7 @@ public class SubTarefaEdicaoDto {
         this.prioridadeTarefa = prioridadeTarefa;
     }
 
-    public String getNome() {
-        return nome;
-    }
+    public String getNome() {return nome;}
 
     public void setNome(String nome) {
         this.nome = nome;

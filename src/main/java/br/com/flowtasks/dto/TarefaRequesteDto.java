@@ -8,8 +8,7 @@ public class TarefaRequesteDto {
 		this.nome = nome;
 	}
 
-	public TarefaRequesteDto() {
-	}
+	public TarefaRequesteDto() {}
 
 	public String getNome() {
 		return nome;

@@ -1,6 +1,5 @@
 package br.com.flowtasks.service;
 
-
 import br.com.flowtasks.dto.SubTarefaEdicaoDto;
 import br.com.flowtasks.dto.SubTarefaRequestDto;
 import br.com.flowtasks.dto.SubTarefaResponseDto;
@@ -8,7 +7,6 @@ import br.com.flowtasks.entities.SubTarefaEntity;
 import br.com.flowtasks.repository.SubTarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 

@@ -2,7 +2,6 @@ package br.com.flowtasks.dto;
 
 import br.com.flowtasks.enums.Prioridade;
 import br.com.flowtasks.enums.Status;
-
 import java.util.Date;
 
 public class TarefaEdicaoDto {

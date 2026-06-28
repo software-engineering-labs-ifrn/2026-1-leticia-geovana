@@ -3,7 +3,6 @@ package br.com.flowtasks.entities;
 import br.com.flowtasks.enums.Prioridade;
 import br.com.flowtasks.enums.Status;
 import jakarta.persistence.*;
-
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Objects;

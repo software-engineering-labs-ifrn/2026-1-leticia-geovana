@@ -5,7 +5,6 @@ import br.com.flowtasks.enums.Prioridade;
 import br.com.flowtasks.enums.Status;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;

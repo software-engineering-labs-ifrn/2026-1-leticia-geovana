@@ -1,8 +1,6 @@
 package br.com.flowtasks.service;
 
-
 import java.util.List;
-
 import br.com.flowtasks.dto.TarefaEdicaoDto;
 import br.com.flowtasks.dto.TarefaRequesteDto;
 import br.com.flowtasks.dto.TarefaResponseDto;

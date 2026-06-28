@@ -1,11 +1,9 @@
 package br.com.flowtasks.controller;
 
 import java.util.List;
-
 import br.com.flowtasks.dto.TarefaEdicaoDto;
 import br.com.flowtasks.dto.TarefaRequesteDto;
 import br.com.flowtasks.dto.TarefaResponseDto;
-import com.employee.crudEmployee.dto.*;
 import br.com.flowtasks.service.TarefaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

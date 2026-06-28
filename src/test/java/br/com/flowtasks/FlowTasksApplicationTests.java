@@ -9,5 +9,4 @@ class FlowTasksApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

@@ -11,7 +11,6 @@ public enum Prioridade {
     Prioridade(int codigoPrioridade) {
         this.codigoPrioridade = codigoPrioridade;
     }
-
     public int getCodigoPrioridade() {
         return codigoPrioridade;
     }

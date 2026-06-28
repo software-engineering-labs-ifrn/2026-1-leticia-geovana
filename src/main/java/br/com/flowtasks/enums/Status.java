@@ -16,7 +16,6 @@ public enum Status {
     public int getCodigo() {
         return codigo;
     }
-
     public String getDescricao() {
         return descricao;
     }

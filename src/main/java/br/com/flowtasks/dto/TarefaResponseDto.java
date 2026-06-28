@@ -2,7 +2,6 @@ package br.com.flowtasks.dto;
 
 import br.com.flowtasks.entities.TarefaEntity;
 import br.com.flowtasks.enums.Status;
-
 import java.util.Date;
 
 public class TarefaResponseDto {

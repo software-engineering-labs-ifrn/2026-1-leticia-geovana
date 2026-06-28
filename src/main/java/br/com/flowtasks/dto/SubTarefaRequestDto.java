@@ -16,6 +16,4 @@ public class SubTarefaRequestDto {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-
 }
