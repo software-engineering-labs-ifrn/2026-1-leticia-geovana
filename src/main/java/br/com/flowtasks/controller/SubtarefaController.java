@@ -44,4 +44,21 @@ public class SubtarefaController {
         SubTarefaResponseDto subTarefaBuscada = subTarefaService.listarSubTarefaPorId(id);
         return  subTarefaBuscada;
     }
+
+    @GetMapping(value = "/tarefa/{tarefaPaiId}")
+    public List<SubTarefaResponseDto> listarSubTarefasPorTarefaPai(@PathVariable Long tarefaPaiId){
+        return subTarefaService.listarSubTarefasPorTarefaPai(tarefaPaiId);
+    }
+
+    @PatchMapping("/{id}/concluir-proxima")
+    public ResponseEntity<SubTarefaResponseDto> concluirProxima(@PathVariable Long id) {
+        SubTarefaResponseDto resposta = subTarefaService.concluirProximaSubTarefa(id);
+        return ResponseEntity.ok(resposta);
+    }
+
+    @GetMapping("/{tarefaPaiId}/proxima")
+    public ResponseEntity<SubTarefaResponseDto> peekProxima(@PathVariable Long tarefaPaiId) {
+        SubTarefaResponseDto resposta = subTarefaService.peekProximaSubTarefa(tarefaPaiId);
+        return ResponseEntity.ok(resposta);
+    }
 }
