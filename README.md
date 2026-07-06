@@ -10,7 +10,7 @@
 </div>
 
 ## Descrição
-
+Uma aplicação de gerenciador/lista de tarefas em Java. 
 
 ## Tecnologias 
 
@@ -27,4 +27,48 @@
 
 ```
 ./flowTasks
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── README.md
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── br
+    │   │       └── com
+    │   │           └── flowtasks
+    │   │               ├── controller
+    │   │               │   ├── SubtarefaController.java
+    │   │               │   └── TarefaController.java
+    │   │               ├── dto
+    │   │               │   ├── SubTarefaEdicaoDto.java
+    │   │               │   ├── SubTarefaRequestDto.java
+    │   │               │   ├── SubTarefaResponseDto.java
+    │   │               │   ├── TarefaEdicaoDto.java
+    │   │               │   ├── TarefaRequesteDto.java
+    │   │               │   └── TarefaResponseDto.java
+    │   │               ├── entities
+    │   │               │   ├── SubTarefaEntity.java
+    │   │               │   └── TarefaEntity.java
+    │   │               ├── enums
+    │   │               │   ├── Prioridade.java
+    │   │               │   └── Status.java
+    │   │               ├── FlowTasksApplication.java
+    │   │               ├── repository
+    │   │               │   ├── SubTarefaRepository.java
+    │   │               │   └── TarefaRepository.java
+    │   │               └── service
+    │   │                   ├── SubTarefaService.java
+    │   │                   └── TarefaService.java
+    │   └── resources
+    │       ├── application-dev.properties
+    │       ├── application.properties
+    │       ├── application-test.properties
+    │       └── data.sql
+    └── test
+        └── java
+            └── br
+                └── com
+                    └── flowtasks
+                        └── FlowTasksApplicationTests.java
 ```
