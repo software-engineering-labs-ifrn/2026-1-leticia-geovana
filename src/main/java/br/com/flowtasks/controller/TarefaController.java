@@ -4,7 +4,7 @@ import java.util.List;
 import br.com.flowtasks.dto.TarefaEdicaoDto;
 import br.com.flowtasks.dto.TarefaRequesteDto;
 import br.com.flowtasks.dto.TarefaResponseDto;
-import br.com.flowtasks.service.TarefaService;
+import br.com.flowtasks.service.TarefaServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TarefaController {
 
 	@Autowired
-	private TarefaService tarefaService;
+	private TarefaServiceInterface tarefaService;
 	
 	@GetMapping
 	public List<TarefaResponseDto> listarTodasAsTarefas(){

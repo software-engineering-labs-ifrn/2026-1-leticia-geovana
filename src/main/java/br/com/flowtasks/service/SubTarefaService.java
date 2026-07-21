@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-public class SubTarefaService {
+public class SubTarefaService implements SubTarefaServiceInterface {
 
 	@Autowired
 	private SubTarefaRepository subTarefaRepository;

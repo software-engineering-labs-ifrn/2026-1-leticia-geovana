@@ -5,7 +5,7 @@ import br.com.flowtasks.enums.Status;
 
 import java.util.Date;
 
-public class SubTarefaEdicaoDto {
+public class SubTarefaEdicaoDto implements EdicaoCamposInterface {
     private String nome;
     private String descricao;
     private Date dataConclusao;

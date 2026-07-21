@@ -1,7 +1,7 @@
 package br.com.flowtasks.controller;
 
 import br.com.flowtasks.dto.*;
-import br.com.flowtasks.service.SubTarefaService;
+import br.com.flowtasks.service.SubTarefaServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 public class SubtarefaController {
 
     @Autowired
-    private SubTarefaService subTarefaService;
+    private SubTarefaServiceInterface subTarefaService;
 
     @GetMapping
     public List<SubTarefaResponseDto> listarTodasSubTarefas() {
