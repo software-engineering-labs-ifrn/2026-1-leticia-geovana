@@ -182,6 +182,16 @@ Controller (REST) → Service (Regras de Negócio) → Repository (Acesso a Dado
                         └── FlowTasksApplicationTests.java
 ```
 
+## Diagramas do projeto
+
+### Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso do flowTasks](./docs/images/mermaid-diagram-CASOS_DE_USO.png)
+
+### Diagrama de Classes
+
+![Diagrama de classes do flowTasks](./docs/images/mermaid-diagram-DIAGRMA_DE_CLASSES.png)
+
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Para contribuir:
