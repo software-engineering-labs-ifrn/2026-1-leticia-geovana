@@ -1,11 +1,20 @@
+### Maven ###
 HELP.md
-target/
+target/i
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
 .mvn/wrapper/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+### STS / Eclipse m2e generated files (Core) ###
 .apt_generated
 .classpath
 .factorypath
@@ -33,5 +42,9 @@ build/
 ### VS Code ###
 .vscode/
 
-### git
+### git ###
 .gitattributes
+
+### Others ###
+README.md.bak
+
