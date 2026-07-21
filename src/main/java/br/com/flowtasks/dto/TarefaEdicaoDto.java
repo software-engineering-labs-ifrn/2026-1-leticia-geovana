@@ -4,7 +4,7 @@ import br.com.flowtasks.enums.Prioridade;
 import br.com.flowtasks.enums.Status;
 import java.util.Date;
 
-public class TarefaEdicaoDto {
+public class TarefaEdicaoDto implements EdicaoCamposInterface {
     private String nome;
     private String descricao;
     private Date dataConclusao;
