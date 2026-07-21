@@ -9,7 +9,7 @@ classDiagram
     }
 
     class TarefaController {
-        -tarefaService: TarefaService
+        -tarefaService: TarefaServiceInterface
         +listarTodasAsTarefas() List~TarefaResponseDto~
         +salvarTarefa(TarefaRequesteDto tarefa) ResponseEntity~Void~
         +listarTarefaPorId(Long id) TarefaResponseDto
@@ -19,7 +19,7 @@ classDiagram
     }
 
     class SubtarefaController {
-        -subTarefaService: SubTarefaService
+        -subTarefaService: SubTarefaServiceInterface
         +listarTodasSubTarefas() List~SubTarefaResponseDto~
         +salvarSubTarefa(SubTarefaRequestDto subTarefa) ResponseEntity~Void~
         +listarSubTarefaPorId(Long id) SubTarefaResponseDto
@@ -30,8 +30,8 @@ classDiagram
         +peekProxima(Long tarefaPaiId) ResponseEntity~SubTarefaResponseDto~
     }
 
-    class TarefaService {
-        -tarefaRepository: TarefaRepository
+    class TarefaServiceInterface {
+        <<interface>>
         +listarTodasAsTarefas() List~TarefaResponseDto~
         +salvarTarefa(TarefaRequesteDto tarefa) void
         +listarTarefaPorId(Long id) TarefaResponseDto
@@ -40,9 +40,12 @@ classDiagram
         +deletarTarefa(Long id) void
     }
 
-    class SubTarefaService {
-        -subTarefaRepository: SubTarefaRepository
+    class TarefaService {
         -tarefaRepository: TarefaRepository
+    }
+
+    class SubTarefaServiceInterface {
+        <<interface>>
         +listarTodasAsSubTarefas() List~SubTarefaResponseDto~
         +salvarSubTarefa(SubTarefaRequestDto subTarefa) void
         +listarSubTarefaPorId(Long id) SubTarefaResponseDto
@@ -51,6 +54,11 @@ classDiagram
         +listarSubTarefasPorTarefaPai(Long tarefaPaiId) List~SubTarefaResponseDto~
         +concluirProximaSubTarefa(Long tarefaPaiId) SubTarefaResponseDto
         +peekProximaSubTarefa(Long tarefaPaiId) SubTarefaResponseDto
+    }
+
+    class SubTarefaService {
+        -subTarefaRepository: SubTarefaRepository
+        -tarefaRepository: TarefaRepository
     }
 
     class TarefaRepository {
@@ -116,6 +124,20 @@ classDiagram
         -subTarefas: List~SubTarefaResponseDto~
     }
 
+    class EdicaoCamposInterface {
+        <<interface>>
+        +getNome() String
+        +setNome(String) void
+        +getDescricao() String
+        +setDescricao(String) void
+        +getDataConclusao() Date
+        +setDataConclusao(Date) void
+        +getStatusTarefa() Status
+        +setStatusTarefa(Status) void
+        +getPrioridadeTarefa() Prioridade
+        +setPrioridadeTarefa(Prioridade) void
+    }
+
     class TarefaEdicaoDto {
         -nome: String
         -descricao: String
@@ -147,8 +169,12 @@ classDiagram
         -prioridadeTarefa: Prioridade
     }
 
-    TarefaController --> TarefaService : usa
-    SubtarefaController --> SubTarefaService : usa
+    TarefaController --> TarefaServiceInterface : depende
+    SubtarefaController --> SubTarefaServiceInterface : depende
+    TarefaServiceInterface <|.. TarefaService : implementa
+    SubTarefaServiceInterface <|.. SubTarefaService : implementa
+    EdicaoCamposInterface <|.. TarefaEdicaoDto : implementa
+    EdicaoCamposInterface <|.. SubTarefaEdicaoDto : implementa
     TarefaService --> TarefaRepository : usa
     TarefaService ..> TarefaResponseDto : retorna
     TarefaService ..> TarefaRequesteDto : recebe
@@ -183,6 +209,7 @@ classDiagram
 |---------|------------|
 | `-->` | Associação (usa) |
 | `..>` | Dependência (cria/retorna/recebe) |
+| `<\|..` | Realização/Implementação de interface |
 | `"1" --> "*"` | Um para muitos (OneToMany) |
 | `"*" --> "1"` | Muitos para um (ManyToOne) |
 | `<<interface>>` | Interface |
@@ -209,6 +236,7 @@ classDiagram
 ### DTOs
 - **Request**: Payloads de entrada para criação/edição
 - **Response**: Payloads de saída, desacoplando a API das entidades internas
+- **EdicaoCamposInterface**: Interface comum para DTOs de edição, garantindo contrato unificado (ISP) |
 
 ### Enums
 - **Status**: Estados possíveis (SEM_STATUS, EM_ANDAMENTO, CONCLUIDO)
